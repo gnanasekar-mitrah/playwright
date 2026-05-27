@@ -29,5 +29,5 @@ test('Checkout process', async ({page}) => {
     await page.getByPlaceholder('Last Name').fill('Doe');
     await page.getByPlaceholder('Postal Code').fill('12345');
     await page.getByRole('button', { name: 'Continue' }).click();
-    await expect(page.locator('.title')).not.toHaveText('Checkout: Overview');
+    await expect(page.locator('.title')).toHaveText('Checkout: Overview');
 });
